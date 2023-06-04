@@ -9,7 +9,7 @@ import reports.ExtentLogger;
 
 public final class OrangeHRMHomePage extends BasePage {
 
-    private final By welcomeLink = By.id("welcome");
+    private final By welcomeLink = By.cssSelector(".oxd-userdropdown-tab");
 
     private final By logoutButton = By.linkText("Logout");
 

@@ -9,11 +9,11 @@ import reports.ExtentLogger;
 
 public final class OrangeHRMLoginPage extends BasePage {
 
-    private final By usernameBox = By.id("txtUsername");
+    private final By usernameBox = By.cssSelector("input[placeholder='Username']");
 
-    private final By passwordBox = By.id("txtPassword");
+    private final By passwordBox = By.cssSelector("input[placeholder='Password']");
 
-    private final By loginButton = By.id("btnLogin");
+    private final By loginButton = By.cssSelector("button[type='submit']");
 
     private final By invalidCredsError = By.id("spanMessage");
 
