@@ -6,7 +6,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.remote.BrowserType;
+import org.openqa.selenium.remote.Browser;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import utils.ReadPropertyFile;
@@ -27,7 +27,7 @@ public final class DriverFactory {
         if (browser.equalsIgnoreCase("chrome")) {
             if (runmode.equalsIgnoreCase("remote")) {
                 DesiredCapabilities cap = new DesiredCapabilities();
-                cap.setBrowserName(BrowserType.CHROME);
+                cap.setBrowserName(Browser.CHROME.browserName());
                 driver = new RemoteWebDriver(new URL(FrameworkConstants.getSeleniumGridUrl()), cap);
             } else if (runmode.equalsIgnoreCase("local")) {
                 WebDriverManager.chromedriver().setup();
@@ -36,7 +36,7 @@ public final class DriverFactory {
         } else if (browser.equalsIgnoreCase("firefox")) {
             if (runmode.equalsIgnoreCase("remote")) {
                 DesiredCapabilities cap = new DesiredCapabilities();
-                cap.setBrowserName(BrowserType.FIREFOX);
+                cap.setBrowserName(Browser.FIREFOX.browserName());
                 driver = new RemoteWebDriver(new URL(FrameworkConstants.getSeleniumGridUrl()), cap);
             } else if (runmode.equalsIgnoreCase("local")) {
                 WebDriverManager.firefoxdriver().setup();
