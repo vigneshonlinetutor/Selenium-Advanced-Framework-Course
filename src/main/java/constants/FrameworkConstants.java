@@ -4,6 +4,7 @@ import enums.ConfigProperties;
 import utils.ReadPropertyFile;
 
 import java.text.SimpleDateFormat;
+import java.time.Duration;
 import java.util.Date;
 
 public class FrameworkConstants {
@@ -16,7 +17,7 @@ public class FrameworkConstants {
     private FrameworkConstants(){}
 
     private static final String CONFIGFILEPATH = System.getProperty("user.dir")+"/src/test/resources/config/config.properties";
-    private static final int WAITTIMEINSECONDS = 10;
+    private static final Duration WAITTIMEINSECONDS = Duration.ofSeconds(10);
     private static final String EXCELFILEPATH = System.getProperty("user.dir")+"/src/test/resources/excel/testData.xlsx";
     private static final String EXCELRUNMANAGER = System.getProperty("user.dir")+"/src/test/resources/excel/TestRunManager.xlsx";
     private static final String EXTENTREPORTFOLDERPATH=System.getProperty("user.dir")+"/extent-test-output/";
@@ -27,7 +28,7 @@ public class FrameworkConstants {
         return CONFIGFILEPATH;
     }
 
-    public static int getWaitTimeInSeconds() {
+    public static Duration getWaitTimeInSeconds() {
         return WAITTIMEINSECONDS;
     }
 
