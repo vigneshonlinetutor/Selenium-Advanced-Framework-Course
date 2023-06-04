@@ -51,7 +51,7 @@ public class FrameworkConstants {
             return EXTENTREPORTFOLDERPATH+"index.html";
         }
         else {
-            SimpleDateFormat formatter = new SimpleDateFormat("dd_MM_yyy_HH:mm:ss");
+            SimpleDateFormat formatter = new SimpleDateFormat("dd_MM_yyy_HH_mm_ss");
             Date date = new Date();
             return EXTENTREPORTFOLDERPATH+formatter.format(date)+"_"+"index.html";
         }
