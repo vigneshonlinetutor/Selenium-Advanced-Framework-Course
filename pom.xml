@@ -45,7 +45,7 @@
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi-ooxml-schemas</artifactId>
-            <version>${apache.poi.version}</version>
+            <version>${apache.poi.ooxml.schemas.version}</version>
         </dependency>
 
         <dependency>
@@ -68,15 +68,16 @@
             <version>${webdriver.manager.version}</version>
         </dependency>
     </dependencies>
-    
+
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
-        <selenium.version>3.141.59</selenium.version>
-        <testng.version>7.4.0</testng.version>
-        <apache.poi.version>4.1.2</apache.poi.version>
+        <selenium.version>4.9.1</selenium.version>
+        <testng.version>7.8.0</testng.version>
+        <apache.poi.version>5.2.3</apache.poi.version>
+        <apache.poi.ooxml.schemas.version>4.1.2</apache.poi.ooxml.schemas.version>
         <extent.version>5.0.9</extent.version>
-        <webdriver.manager.version>5.0.3</webdriver.manager.version>
+        <webdriver.manager.version>5.3.3</webdriver.manager.version>
     </properties>
 
 </project>
