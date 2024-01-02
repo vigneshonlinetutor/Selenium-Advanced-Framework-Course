@@ -1,4 +1,3 @@
 .idea
 extent-test-output
-target/classes
-target/test-classes
+target/
