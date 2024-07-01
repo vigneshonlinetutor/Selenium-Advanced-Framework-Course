@@ -61,13 +61,6 @@
             <version>${extent.version}</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
-        <dependency>
-            <groupId>io.github.bonigarcia</groupId>
-            <artifactId>webdrivermanager</artifactId>
-            <version>${webdriver.manager.version}</version>
-        </dependency>
-
         <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -82,12 +75,11 @@
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
-        <selenium.version>4.21.0</selenium.version>
+        <selenium.version>4.22.0</selenium.version>
         <testng.version>7.10.2</testng.version>
         <apache.poi.version>5.2.3</apache.poi.version>
         <apache.poi.ooxml.schemas.version>4.1.2</apache.poi.ooxml.schemas.version>
         <extent.version>5.0.9</extent.version>
-        <webdriver.manager.version>5.3.3</webdriver.manager.version>
         <lombok.version>1.18.32</lombok.version>
     </properties>
 

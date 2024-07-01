@@ -2,7 +2,6 @@ package factories;
 
 import constants.FrameworkConstants;
 import enums.ConfigProperties;
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -30,7 +29,6 @@ public final class DriverFactory {
                 cap.setBrowserName(Browser.CHROME.browserName());
                 driver = new RemoteWebDriver(new URL(FrameworkConstants.getSeleniumGridUrl()), cap);
             } else if (runmode.equalsIgnoreCase("local")) {
-                WebDriverManager.chromedriver().setup();
                 driver = new ChromeDriver();
             }
         } else if (browser.equalsIgnoreCase("firefox")) {
@@ -39,7 +37,6 @@ public final class DriverFactory {
                 cap.setBrowserName(Browser.FIREFOX.browserName());
                 driver = new RemoteWebDriver(new URL(FrameworkConstants.getSeleniumGridUrl()), cap);
             } else if (runmode.equalsIgnoreCase("local")) {
-                WebDriverManager.firefoxdriver().setup();
                 driver = new FirefoxDriver();
             }
         }
